@@ -1,0 +1,30 @@
+{
+  "name": "wicker",
+  "version": "0.1.0",
+  "description": "A live updating wiki",
+  "main": "server.js",
+  "scripts": {
+    "build:js": "browserify ./src/app.js  -t [ babelify --optional es7.classProperties ] --outfile public/all.js",
+    "build": "watch 'npm run build:js' ./src"
+  },
+  "author": "Jack Flannery <jmflannery81@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "cookie-parser": "^1.4.0",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "express-session": "^1.12.1",
+    "firebase": "^2.3.2",
+    "react": "^0.14.3",
+    "react-router": "^0.13.5"
+  },
+  "devDependencies": {
+    "babelify": "^6.4.0",
+    "browserify": "^12.0.1",
+    "watch": "^0.16.0"
+  }
+}
